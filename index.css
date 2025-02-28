@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+
+    font-family: 'Prompt', sans-serif;
+    color: white;
+    background-color: #202731;
+    overflow-x: hidden;
+}
+
+section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    padding: 100px 20vw;
+}
+
+section h1 {
+    z-index: 1;
+}
+
+section p {
+    z-index: 1;
+}
+
+.blue {
+    background: #3c31dd;
+}
+
+.red {
+    background: #dd3f31;
+}
+
+.pink {
+    background: #ff0066;
+}
+
+.dark {
+    background: #000000;
+}
+
+.rose {
+    background: #e0223e;
+}
+
+.curve {
+    position: absolute;
+    height: 225px;
+    width: 100%;
+    bottom: 0;
+}
+
+.curve::before {
+    content: '';
+    position: absolute;
+    display: block;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: #202731;
+    transform: translate(85%, 60%);
+}
+
+.curve::after {
+    content: '';
+    position: absolute;
+    display: block;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    transform: translate(-4%, 40%);
+    z-index: -1;
+    background-color: #3c31dd;
+}
+
+.bubble::after {
+    content: '';
+    border-radius: 100% 100%;
+    position: absolute;
+    bottom: 0;
+    height: 85%;
+    width: 100%;
+    background-color: #000000;
+    transform: translateY(50%)
+}
+
+/*Code provided by https://www.shapedivider.app/ */
+.wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+/*SVG from https://app.haikei.app/*/
+.spacer {
+    aspect-ratio: 960/540;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.layer1 {
+    background-image: url('./layer1.svg')
+}
+
+.layer2 {
+    background-image: url('./layer2.svg')
+}
+
+.blob-motion {
+    position: absolute;
+    transform: translateY(-50%);
+    z-index: 0;
+}
