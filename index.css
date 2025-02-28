@@ -20,6 +20,26 @@ section h1 {
     z-index: 1;
 }
 
+.h-shifted {
+    transform: translateY(-25%)
+}
+
+.shifted {
+    transform: translateY(-50%)
+}
+
+.d-shifted {
+    transform: translateY(-100%)
+}
+
+.t-shifted {
+    transform: translateY(-150%)
+}
+
+.th-shifted-flip {
+    transform: translateY(-125%) rotate(180deg)
+}
+
 section p {
     z-index: 1;
 }
@@ -79,7 +99,7 @@ section p {
     border-radius: 100% 100%;
     position: absolute;
     bottom: 0;
-    height: 85%;
+    height: 65%;
     width: 100%;
     background-color: #000000;
     transform: translateY(50%)
