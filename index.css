@@ -168,22 +168,49 @@ section p {
 }
 
 .numbered-list {
-    list-style-type: decimal;
+    list-style-type: none;
+    counter-reset: my-counter;
 }
 
 .numbered-list li {
     margin: 15px;
     padding: 3px;
     background-color: rgb(60, 49, 221);
-    /*background-color: #3c31dd;*/
     border-radius: 5px;
-    /*border: 1px solid #ffff;*/
     transition: 0.1s ease-in-out;
+    counter-increment: my-counter;
+    position: relative;
+}
+
+.numbered-list li:nth-child(1):before {
+    top: 10px;
+}
+
+.numbered-list li:before {
+    bottom: 1px;
+    position: absolute;
+    content: counter(my-counter);
+    left: -40px;
+    border-radius: 10px;
+    background: #ffffff;
+    color: rgb(60, 49, 221);
+    font-weight: bold;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
 }
 
 .numbered-list li:hover {
-    background-color: rgb(125, 125, 225);
+    background-color: #ffffff;
     transform: scale(1.15);
+    color: #3c31dd;
+}
+
+.numbered-list li:hover:before {
+    background-color: #3c31dd;
+    transform: scale(1.15);
+    color: #ffffff;
 }
 
 .single-character-scale span {
