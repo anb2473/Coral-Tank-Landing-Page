@@ -257,6 +257,9 @@ section p {
     text-align: center;
     white-space: nowrap;
     transition: 0.05s ease-in-out;
+    user-select: none;
+    cursor: default;
+    pointer-events: none;
 }
 
 .investment--ships:hover ~ .investment--text {
