@@ -15,6 +15,21 @@ header {
     header .warning {
         display: none;
     }
+    header .links a {
+        position: relative;
+    }
+    header .links a::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background-color: white;
+        transform: translate(-100%, 1000%);
+        transition: width 0.5s ease;
+    }
+    header .links a:hover::after {
+        width: 100%;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -71,6 +86,10 @@ section h1 {
 
 .th-shifted-flip {
     transform: rotate(180deg);
+    bottom: 125%;
+}
+
+.th-shifted {
     bottom: 125%;
 }
 
@@ -373,4 +392,21 @@ section p {
 
 .research--lab:hover ~ .research--lab--text {
     opacity: 0;
+}
+
+.about-us--pic {
+    transition: 0.3s ease-in-out;
+    position: absolute;
+    width: 60%;
+    height: 80%;
+    z-index: 1;
+    margin-top: 150px;
+    background-size: cover;
+    background-image: url("./team-pic.jpeg");
+    border-radius: 20px;
+    transform: translateY(-140%);
+}
+
+.about-us--pic:hover {
+    transform: translateY(-140%) scale(1.1);
 }
