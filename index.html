@@ -188,6 +188,20 @@
     <h1>Infrastructure</h1>
     <p>Growing GMO corals requires specific infrastructure including tanks such as frag tanks, water reservoirs, and
         CRISPR Cas9 or other genome editing technology, and micro injection tools.</p>
+    <div class="infrastructure--dna"></div>
+    <script>
+        scrolling_image_2 = document.querySelector('.infrastructure--dna');
+        window.addEventListener('scroll', function() {
+            let scroll_position = window.scrollY;
+            const deviceWidth = window.innerWidth;
+            if (deviceWidth > 1250){
+                scrolling_image_2.style.filter = `blur(${Math.max((250 - ((scroll_position) - 6000)), 0)}px)`;
+            }
+            else {
+                scrolling_image_2.style.filter = `blur(${Math.max((250 - ((scroll_position) - 5000)), 0)}px)`;
+            }
+        });
+    </script>
 </section>
 
 <div class="spacer layer2 th-shifted"></div>

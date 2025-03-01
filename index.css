@@ -414,3 +414,15 @@ section p {
 .divider {
     height: 100px;
 }
+
+.infrastructure--dna {
+    transition: 0.3s ease-in-out;
+    position: absolute;
+    width: 60%;
+    height: 80%;
+    z-index: 1;
+    margin-top: 150px;
+    background-size: cover;
+    background-image: url("./dna.jpg");
+    border-radius: 20px;
+}
