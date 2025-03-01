@@ -207,10 +207,58 @@ section p {
 }
 
 .next-steps--coral {
+    /*transition: 0.3s ease-in-out;*/
     position: absolute;
     width: 35%;
     height: 30%;
     background-size: cover;
     background-image: url("./coral.jpg");
     border-radius: 20px;
+}
+
+.investment--ships {
+    transition: 0.3s ease-in-out;
+    position: absolute;
+    width: 60%;
+    height: 80%;
+    background-size: cover;
+    background-image: url("./ships.jpg");
+    border-radius: 20px;
+    transform: translateY(40%);
+}
+
+.investment--ships::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 0, 102, 1); /* Semi-transparent overlay */
+    border-radius: 20px;
+    transition: background-color 0.3s ease-in-out; /* Smooth transition for hover effect */
+    z-index: 1; /* Overlay above the background */
+}
+
+.investment--ships:hover::after {
+    background-color: transparent; /* Make the overlay transparent on hover */
+}
+
+.investment--text {
+    position: relative;
+    font-size: 5rem;
+    font-weight: bold;
+    color: transparent; /* Makes the text transparent */
+    background-image: url("./ships.jpg"); /* Apply the same image as the background */
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text; /* WebKit support */
+    z-index: 2;
+    transform: translateY(150%);
+    background-position: 8% 28%;
+    text-align: center;
+    white-space: nowrap;
+    transition: 0.05s ease-in-out;
+}
+
+.investment--ships:hover ~ .investment--text {
+    opacity: 0;
 }

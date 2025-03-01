@@ -59,6 +59,9 @@
                   class="shape-fill"></path>
         </svg>
     </div>
+
+    <div class="investment--ships"></div>
+    <h2 class="investment--text">OPPORTUNITY</h2>
 </section>
 
 <div class="spacer layer1"></div>
@@ -77,6 +80,51 @@
 
             scrolling_image.style.transform = `translateY(${-scroll_position / 10 - 275}px)`;
         });
+
+        let x = 0
+        let y = 0
+        document.addEventListener('mousemove', function(e) {
+            x = e.clientX;
+            y = e.clientY;
+        });
+
+        function pointInsideElement(element, x, y) {
+            const rect = element.getBoundingClientRect();
+            return x >= rect.left && x <= rect.right && y >= rect.top && y <= rect.bottom;
+        }
+
+        function manager_loop () {
+            setTimeout(() => {
+                if (pointInsideElement(scrolling_image, x, y)){
+                    if (scrolling_image.style.transform.split(' ').length === 1){
+                        scrolling_image.style.transform = `${scrolling_image.style.transform} scale(1.001)`;
+                        console.log(scrolling_image.style.transform)
+                    }
+                    else {
+                        let split_data = scrolling_image.style.transform.split(' ');
+                        let current_val = parseFloat(split_data[1].split('(')[1].split(')')[0]);
+                        if (current_val < 1.1) {
+                            current_val *= 1.003;
+                            scrolling_image.style.transform = `${split_data[0]} scale(${current_val.toString()})`;
+                        }
+                    }
+                }
+                else {
+                    let split_data = scrolling_image.style.transform.split(' ');
+                    if (split_data.length === 2){
+                        let current_val = parseFloat(split_data[1].split('(')[1].split(')')[0]);
+                        if (current_val > 1) {
+                            current_val /= 1.003;
+                            scrolling_image.style.transform = `${split_data[0]} scale(${current_val.toString()})`;
+                        }
+                    }
+                }
+
+                manager_loop();
+            });
+        }
+
+        manager_loop();
     </script>
 </section>
 
