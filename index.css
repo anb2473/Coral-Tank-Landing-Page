@@ -11,7 +11,7 @@ header {
     background-color: #3c31dd;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1250px) {
     header .warning {
         display: none;
     }
@@ -32,7 +32,7 @@ header {
     }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1250px) {
     header .warning {
         padding: 20px;
     }
