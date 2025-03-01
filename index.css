@@ -408,7 +408,7 @@ section p {
 }
 
 .about-us--pic:hover {
-    transform: translateY(-140%) scale(1.1);
+    transform: scale(1.1);
 }
 
 .divider {
