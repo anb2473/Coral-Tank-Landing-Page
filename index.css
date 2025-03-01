@@ -7,6 +7,24 @@ body {
     overflow-x: hidden;
 }
 
+header {
+    background-color: #3c31dd;
+}
+
+.links {
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    margin: auto;
+}
+
+.links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.25rem;
+}
+
 section {
     position: relative;
     display: flex;
@@ -21,27 +39,22 @@ section h1 {
 }
 
 .h-shifted {
-    /*transform: translateY(-25%)*/
     bottom: 25%;
 }
 
 .shifted {
-    /*transform: translateY(-50%)*/
     bottom: 50%;
 }
 
 .d-shifted {
-    /*transform: translateY(-100%)*/
     bottom: 100%;
 }
 
 .t-shifted {
-    /*transform: translateY(-150%)*/
     bottom: 150%;
 }
 
 .th-shifted-flip {
-    /*transform: translateY(-125%) rotate(180deg)*/
     transform: rotate(180deg);
     bottom: 125%;
 }
@@ -182,4 +195,22 @@ section p {
 
 .single-character-scale span:hover {
     transform: scale(1.15);
+}
+
+#next-steps {
+    height: 75vw;
+    position: absolute;
+}
+
+.next-steps-text {
+    transform: translateY(-250%);
+}
+
+.next-steps--coral {
+    position: absolute;
+    width: 35%;
+    height: 30%;
+    background-size: cover;
+    background-image: url("./coral.jpg");
+    border-radius: 20px;
 }

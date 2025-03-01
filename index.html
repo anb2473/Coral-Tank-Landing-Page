@@ -13,7 +13,16 @@
     <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
 </head>
 <body>
-<header></header>
+<header>
+    <div class="links">
+        <a href="#steps">steps</a>
+        <a href="#modern-infrastructure">scalability</a>
+        <a href="#infrastructure">infrastructure</a>
+        <a href="#investment">investment</a>
+        <a href="#next-steps">plan</a>
+        <a href="#research">pre-existing research</a>
+    </div>
+</header>
 <section class="blue title">
     <h1 class="single-character-scale">
         <span>GMO</span>
@@ -21,7 +30,7 @@
     <p>Leading technology to revolutionize fighting climate change.</p>
     <div class="curve"></div>
 </section>
-<section class="bubble">
+<section class="bubble" id="steps">
     <h1>Steps</h1>
     <ul class="numbered-list">
         <li>Genetically Modify coral to survive heat based on existing heat-resistant coral such as species around
@@ -30,18 +39,13 @@
         <li>Move the coral into the ocean through organizations operating shipping fleets.</li>
         <li>Wait for coral to mature and expand naturally.</li>
     </ul>
-<!--    <p>1. Genetically Modify coral to survive heat based on existing heat-resistant coral such as species around-->
-<!--        the Tropic of Cancer.</p>-->
-<!--    <p>2. Grow the coral on land until it has matured.</p>-->
-<!--    <p>3. Move the coral into the ocean through organizations operating shipping fleets.</p>-->
-<!--    <p>4. Wait for coral to mature and expand naturally.</p>-->
 </section>
-<section class="dark">
+<section class="dark" id="modern-infrastructure">
     <h1>Scalable Infrastructure</h1>
     <p>With modern, flexible, on land tank infrastructure we aim to provide easy, efficient, and safe integration
         with our current ecosystem.</p>
 </section>
-<section class="red h-shifted pixel-shift">
+<section class="red" id="investment">
     <h1>Investment</h1>
     <p>We plan to reach out to organizations such as NOAA's Coral Reef Conservation Program, the National Fish
         and Wildlife Foundation, tourism industries, aquariums, coastal communities, and private companies
@@ -57,17 +61,28 @@
     </div>
 </section>
 
-<div class="spacer layer1  shifted"></div>
+<div class="spacer layer1"></div>
 
-<section class="t-shifted">
-    <h1>Next Steps</h1>
-    <p>Secure funding from organizations, setting up pilot coral farms, and conducting further research to develop
-        our idea, alongside crowdfunding and marketing programs.</p>
+<section id="next-steps">
+    <div class="next-steps--coral"></div>
+    <div class="next-steps-text">
+        <h1>Next Steps</h1>
+        <p>Secure funding from organizations, setting up pilot coral farms, and conducting further research to develop
+            our idea, alongside crowdfunding and marketing programs.</p>
+    </div>
+    <script>
+        scrolling_image = document.querySelector('.next-steps--coral');
+        window.addEventListener('scroll', function() {
+            let scroll_position = window.scrollY;
+
+            scrolling_image.style.transform = `translateY(${-scroll_position / 10 - 275}px)`;
+        });
+    </script>
 </section>
 
-<div class="spacer layer2 d-shifted"></div>
+<div class="spacer layer2"></div>
 
-<section class="rose t-shifted">
+<section class="rose" id="research">
     <h1>Pre-Existing Research</h1>
     <p>Scientists are exploring the possibilities of GMO corals across the globe. Researchers at Stanford University
         led by Dr. Philip Cleves are using the CRISPR-Cas9 genome editing technology to modify coral genes.</p>
@@ -97,13 +112,12 @@
 
 <div class="spacer layer2 th-shifted-flip"></div>
 
-<section class="t-shifted">
+<section class="t-shifted" id="infrastructure">
     <h1>Infrastructure</h1>
     <p>Growing GMO corals requires specific infrastructure including tanks such as frag tanks, water reservoirs, and
         CRISPR Cas9 or other genome editing technology, and micro injection tools.</p>
 </section>
 
 <footer></footer>
-<script src="index.js"></script>
 </body>
 </html>
