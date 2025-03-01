@@ -21,23 +21,29 @@ section h1 {
 }
 
 .h-shifted {
-    transform: translateY(-25%)
+    /*transform: translateY(-25%)*/
+    bottom: 25%;
 }
 
 .shifted {
-    transform: translateY(-50%)
+    /*transform: translateY(-50%)*/
+    bottom: 50%;
 }
 
 .d-shifted {
-    transform: translateY(-100%)
+    /*transform: translateY(-100%)*/
+    bottom: 100%;
 }
 
 .t-shifted {
-    transform: translateY(-150%)
+    /*transform: translateY(-150%)*/
+    bottom: 150%;
 }
 
 .th-shifted-flip {
-    transform: translateY(-125%) rotate(180deg)
+    /*transform: translateY(-125%) rotate(180deg)*/
+    transform: rotate(180deg);
+    bottom: 125%;
 }
 
 section p {
@@ -155,14 +161,15 @@ section p {
 .numbered-list li {
     margin: 15px;
     padding: 3px;
-    background-color: rgba(75, 75, 225, 0.35);
+    background-color: rgb(60, 49, 221);
+    /*background-color: #3c31dd;*/
     border-radius: 5px;
-    border: 1px solid #ffff;
+    /*border: 1px solid #ffff;*/
     transition: 0.1s ease-in-out;
 }
 
 .numbered-list li:hover {
-    background-color: rgba(125, 125, 225, 0.5);
+    background-color: rgb(125, 125, 225);
     transform: scale(1.15);
 }
 
