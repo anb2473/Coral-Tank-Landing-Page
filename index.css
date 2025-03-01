@@ -155,7 +155,7 @@ section p {
     height: 65%;
     width: 100%;
     background-color: #000000;
-    transform: translateY(50%)
+    transform: translateY(50%) translateY(100px);
 }
 
 /*Code provided by https://www.shapedivider.app/ */
@@ -409,4 +409,8 @@ section p {
 
 .about-us--pic:hover {
     transform: translateY(-140%) scale(1.1);
+}
+
+.divider {
+    height: 100px;
 }
