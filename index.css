@@ -165,3 +165,14 @@ section p {
     background-color: rgba(125, 125, 225, 0.5);
     transform: scale(1.15);
 }
+
+.single-character-scale span {
+    transition: 0.2s ease-in-out;
+    padding: 0;
+    margin: 0;
+    display: inline-block
+}
+
+.single-character-scale span:hover {
+    transform: scale(1.15);
+}
