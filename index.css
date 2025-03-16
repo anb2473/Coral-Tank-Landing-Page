@@ -158,6 +158,17 @@ section p {
     transform: translateY(50%) translateY(100px);
 }
 
+.bubble-back::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 65%;
+    width: 100%;
+    background-color: #e0223e;
+    z-index: -100;
+    transform: translateY(50%) translateY(100px);
+}
+
 /*Code provided by https://www.shapedivider.app/ */
 .wave {
     position: absolute;
@@ -425,4 +436,12 @@ section p {
     background-size: cover;
     background-image: url("./dna.jpg");
     border-radius: 20px;
+}
+
+.steps-list li {
+    padding-top: 10px;
+}
+
+.steps-list {
+    list-style-type: none;
 }
