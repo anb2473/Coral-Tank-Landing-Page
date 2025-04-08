@@ -193,7 +193,7 @@ section p {
 }
 
 .layer2 {
-    background-image: url('./layer2.svg')
+    background-image: url('../Science/layer2.svg')
 }
 
 .blob-motion {
@@ -412,8 +412,9 @@ section p {
     height: 80%;
     z-index: 1;
     margin-top: 150px;
+    background-position-y: -25vw;
     background-size: cover;
-    background-image: url("./team-pic.jpeg");
+    background-image: url("./team-pic.jpg");
     border-radius: 20px;
     transform: translateY(-140%);
 }
