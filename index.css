@@ -252,6 +252,20 @@ section p, .title p {
     line-height: 30px;
 }
 
+.about-us--pic {
+    transition: 0.3s ease-in-out;
+    position: absolute;
+    width: 60%;
+    height: 80%;
+    z-index: 1;
+    margin-top: 150px;
+    background-position-y: -25vw;
+    background-size: cover;
+    background-image: url("./team-pic.jpg");
+    border-radius: 20px;
+    transform: translateY(-140%);
+}
+
 .numbered-list li:hover {
     background-color: #ffffff;
     transform: scale(1.15);
@@ -550,20 +564,6 @@ section p, .title p {
 
 .research--lab:hover ~ .research--lab--text {
     opacity: 0;
-}
-
-.about-us--pic {
-    transition: 0.3s ease-in-out;
-    position: absolute;
-    width: 60%;
-    height: 80%;
-    z-index: 1;
-    margin-top: 150px;
-    background-position-y: -25vw;
-    background-size: cover;
-    background-image: url("./team-pic.jpg");
-    border-radius: 20px;
-    transform: translateY(-140%);
 }
 
 .about-us--pic:hover {
