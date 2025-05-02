@@ -473,8 +473,13 @@ section p, .title p {
     pointer-events: none;
 }
 .investment--ships:hover ~ .investment--text {
+    opacity: 0; 
+}
+
+ivestment--text:hover {
     opacity: 0;
 }
+
 .research--lab {
     transition: 0.3s ease-in-out;
     position: absolute;
