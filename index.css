@@ -151,7 +151,7 @@ section p, .title p {
 
 .bubble::after {
     content: '';
-    border-radius: 100% 100%;
+    border-radius: 100% 100% 0 0;
     position: absolute;
     bottom: 0;
     height: 65%;
