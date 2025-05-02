@@ -384,13 +384,17 @@ section p, .title p {
         position: relative;
         width: 95vw;
         max-width: 500px;
-        height: 320px;
-        max-height: 400px;
+        height: 180px;
+        max-height: 220px;
         margin: 30px auto 0 auto;
         left: 0;
         right: 0;
         background-size: cover;
         background-position: center;
+    }
+    .next-steps--coral::after,
+    .next-steps-text {
+        display: none !important;
     }
     .investment--ships::after {
         display: none !important;
