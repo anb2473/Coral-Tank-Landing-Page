@@ -481,11 +481,6 @@ section p, .title p {
     opacity: 0;
 }
 
-ivestment--text:hover {
-    display: none;
-    opacity: 0;
-}
-
 .research--lab {
     transition: 0.3s ease-in-out;
     position: absolute;
