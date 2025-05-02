@@ -64,6 +64,10 @@ section {
     padding: 100px 20vw;
 }
 
+.divider {
+    height: 100px;
+}
+
 section h1 {
     z-index: 1;
 }
@@ -564,10 +568,6 @@ section p, .title p {
 
 .about-us--pic:hover {
     transform: translateY(-140%) scale(1.1);
-}
-
-.divider {
-    height: 100px;
 }
 
 .infrastructure--dna {
