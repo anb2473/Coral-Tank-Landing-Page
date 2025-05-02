@@ -329,9 +329,9 @@ section p, .title p {
     .curve, .curve::before, .curve::after {
         height: 80px;
     }
-    .bubble::after, .bubble-back::before {
+    /* .bubble::after, .bubble-back::before {
         height: 40%;
-    }
+    } */
     .spacer {
         aspect-ratio: 1/1;
         min-height: 80px;
