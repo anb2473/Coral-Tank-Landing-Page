@@ -431,6 +431,7 @@ section p, .title p {
 
     .about-us--pic {
         height: 50%;
+        transform: translateY(-180%);
     }
 }
 @media (min-width: 769px) {
