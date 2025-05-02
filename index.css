@@ -477,8 +477,8 @@ section p, .title p {
     cursor: default;
     pointer-events: none;
 }
-.investment--ships:hover ~ .investment--text {
-    opacity: 0; 
+.investment--ships:hover .investment--text {
+    opacity: 0;
 }
 
 ivestment--text:hover {
