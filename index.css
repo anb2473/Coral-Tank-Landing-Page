@@ -384,8 +384,8 @@ section p, .title p {
         position: relative;
         width: 95vw;
         max-width: 500px;
-        height: 320px;
-        max-height: 400px;
+        height: 220px;
+        max-height: 300px;
         margin: 30px auto 0 auto;
         left: 0;
         right: 0;
