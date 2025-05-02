@@ -381,6 +381,9 @@ section p, .title p {
         height: auto;
         position: static;
     }
+    .bubble::before::after {
+        height: 100%;
+    }
     .next-steps--coral {
         position: relative;
         width: 95vw;
