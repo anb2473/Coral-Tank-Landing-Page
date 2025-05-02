@@ -84,6 +84,10 @@ section h1 {
     bottom: 150%;
 }
 
+.divider {
+    height: 100px;
+}
+
 .th-shifted-flip {
     transform: rotate(180deg);
     bottom: 125%;
@@ -376,9 +380,6 @@ section p, .title p {
     #next-steps {
         height: auto;
         position: static;
-    }
-    .divider {
-        height: 40px;
     }
     .next-steps--coral {
         position: relative;
