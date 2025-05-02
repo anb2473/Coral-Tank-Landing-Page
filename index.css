@@ -440,6 +440,11 @@ section p, .title p {
         padding: 0;
     }
 }
+
+.investment--ships {
+    margin-top: 20px;
+}
+
 .investment--ships::after {
     content: '';
     position: absolute;
