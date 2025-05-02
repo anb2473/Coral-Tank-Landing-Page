@@ -410,6 +410,10 @@ section p, .title p {
     .research--lab--text {
         display: none !important;
     }
+
+    .divider {
+        height: 80px;
+    }
 }
 @media (min-width: 769px) {
     .investment--ships {
