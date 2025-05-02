@@ -350,14 +350,17 @@ section p, .title p {
     .investment--ships {
         width: 80% !important;
         max-width: 350px;
-        height: 120px !important;
-        max-height: 150px;
-        margin: 0 auto 20px auto !important;
+        height: 220px !important;
+        max-height: 250px;
+        margin: 40px auto 20px auto !important;
         position: relative !important;
         background-size: cover;
         background-image: url("./ships.jpg");
         border-radius: 20px;
         box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .investment--ships::after {
         background-color: rgba(255, 0, 102, 0.7);
@@ -368,7 +371,7 @@ section p, .title p {
         background-color: rgba(255, 0, 102, 0.7); /* No hover effect on mobile */
     }
     .investment--text {
-        font-size: 1.5rem;
+        font-size: 2rem;
         background-size: cover;
         background-image: url("./ships.jpg");
         background-clip: text;
@@ -378,6 +381,13 @@ section p, .title p {
         transform: none;
         margin: 0 auto;
         text-align: center;
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
     }
     .next-steps-text {
         transform: none;
@@ -391,16 +401,22 @@ section p, .title p {
         height: 40px;
     }
 }
-@media (min-width: 768px) {
+@media (min-width: 769px) {
     .investment--ships {
-        transition: 0.3s ease-in-out;
-        position: absolute;
-        width: 60%;
-        height: 80%;
-        background-size: cover;
-        background-image: url("./ships.jpg");
-        border-radius: 20px;
-        transform: translateY(40%);
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .investment--text {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        font-size: 3rem;
     }
 }
 
