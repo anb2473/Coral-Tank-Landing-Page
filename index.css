@@ -401,6 +401,14 @@ section p, .title p {
     .investment--text {
         display: none !important;
     }
+    .research--lab {
+        height: 120px !important;
+        max-height: 180px !important;
+    }
+    .research--lab::after,
+    .research--lab--text {
+        display: none !important;
+    }
 }
 @media (min-width: 769px) {
     .investment--ships {
