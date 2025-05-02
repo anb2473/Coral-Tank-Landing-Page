@@ -93,8 +93,10 @@ section h1 {
     bottom: 125%;
 }
 
-section p {
+section p, .title p {
     z-index: 1;
+    font-size: 1.25rem;
+    text-align: center;
 }
 
 .blue {
@@ -316,7 +318,7 @@ section p {
         text-align: center;
     }
     section p, .title p {
-        font-size: 1rem;
+        font-size: 1.1rem;
         text-align: center;
     }
     .numbered-list li {
