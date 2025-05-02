@@ -394,21 +394,39 @@ section p, .title p {
 }
 @media (min-width: 769px) {
     .investment--ships {
-        margin-top: 40px;
-        position: relative;
+        transition: 0.3s ease-in-out;
+        position: absolute;
+        width: 60%;
+        height: 80%;
+        background-size: cover;
+        background-image: url("./ships.jpg");
+        border-radius: 20px;
+        transform: translateY(40%);
     }
     .investment--text {
-        position: absolute;
+        position: relative;
+        font-size: 5rem;
+        font-weight: bold;
+        color: transparent;
+        background-image: url("./ships.jpg");
+        background-size: cover;
+        background-clip: text;
+        -webkit-background-clip: text;
         z-index: 2;
-        width: 90%;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        height: auto;
-        display: block;
-        font-size: 2.2rem;
+        transform: translateY(150%);
+        background-position: 8% 28%;
         text-align: center;
-        line-height: 1.2;
+        white-space: nowrap;
+        transition: 0.05s ease-in-out;
+        user-select: none;
+        cursor: default;
+        pointer-events: none;
+        display: block;
+        width: 100%;
+        height: auto;
+        left: unset;
+        top: unset;
+        line-height: normal;
         padding: 0;
     }
 }
