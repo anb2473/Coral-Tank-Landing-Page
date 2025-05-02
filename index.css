@@ -442,7 +442,7 @@ section p, .title p {
 }
 
 .investment--ships {
-    margin-top: 20px;
+    margin-top: 10vh;
 }
 
 .investment--ships::after {
@@ -482,6 +482,7 @@ section p, .title p {
 }
 
 ivestment--text:hover {
+    display: none;
     opacity: 0;
 }
 
