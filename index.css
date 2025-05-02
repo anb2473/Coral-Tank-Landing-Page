@@ -402,7 +402,7 @@ section p, .title p {
         display: none !important;
     }
     .research--lab {
-        height: 128px !important;
+        height: 180px !important;
         max-height: 220px !important;
         margin-top: 10vw;
     }
