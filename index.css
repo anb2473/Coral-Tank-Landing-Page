@@ -404,7 +404,7 @@ section p, .title p {
     .research--lab {
         height: 180px !important;
         max-height: 220px !important;
-        margin-top: 10vw;
+        margin-top: 20vw;
     }
     .research--lab::after,
     .research--lab--text {
