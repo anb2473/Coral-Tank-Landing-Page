@@ -402,8 +402,8 @@ section p, .title p {
         display: none !important;
     }
     .research--lab {
-        height: 180px !important;
-        max-height: 220px !important;
+        height: 240px !important;
+        max-height: 280px !important;
         margin-top: 20vw;
     }
     .research--lab::after,
