@@ -384,13 +384,14 @@ section p, .title p {
         position: relative;
         width: 95vw;
         max-width: 500px;
-        height: 180px;
-        max-height: 220px;
+        height: 100px;
+        max-height: 180px;
         margin: 30px auto 0 auto;
         left: 0;
         right: 0;
         background-size: cover;
         background-position: center;
+        display: block !important;
     }
     .next-steps--coral::after,
     .next-steps-text {
