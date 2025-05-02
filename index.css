@@ -331,7 +331,6 @@ section p, .title p {
     }
     .bubble::after, .bubble-back::before {
         height: 40%;
-        transform: translateY(30%) translateY(40px);
     }
     .spacer {
         aspect-ratio: 1/1;
