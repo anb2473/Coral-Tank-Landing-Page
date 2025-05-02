@@ -64,10 +64,6 @@ section {
     padding: 100px 20vw;
 }
 
-.divider {
-    height: 100px;
-}
-
 section h1 {
     z-index: 1;
 }
@@ -413,10 +409,6 @@ section p, .title p {
     .research--lab::after,
     .research--lab--text {
         display: none !important;
-    }
-
-    .divider {
-        height: 80px;
     }
 }
 @media (min-width: 769px) {
