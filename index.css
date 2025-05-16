@@ -30,6 +30,9 @@ header {
     header .links a:hover::after {
         width: 100%;
     }
+    .next-steps--coral {
+        height: 50%;
+    }
 }
 
 @media (max-width: 1250px) {
@@ -84,10 +87,6 @@ section h1 {
     bottom: 150%;
 }
 
-.divider {
-    height: 100px;
-}
-
 .th-shifted-flip {
     transform: rotate(180deg);
     bottom: 125%;
@@ -97,10 +96,8 @@ section h1 {
     bottom: 125%;
 }
 
-section p, .title p {
+section p {
     z-index: 1;
-    font-size: 1.25rem;
-    text-align: center;
 }
 
 .blue {
@@ -155,7 +152,7 @@ section p, .title p {
 
 .bubble::after {
     content: '';
-    border-radius: 100% 100% 0 0;
+    border-radius: 100% 100%;
     position: absolute;
     bottom: 0;
     height: 65%;
@@ -199,7 +196,7 @@ section p, .title p {
 }
 
 .layer2 {
-    background-image: url('./layer2.svg')
+    background-image: url('../Science/layer2.svg')
 }
 
 .blob-motion {
@@ -252,20 +249,6 @@ section p, .title p {
     line-height: 30px;
 }
 
-.about-us--pic {
-    transition: 0.3s ease-in-out;
-    position: absolute;
-    width: 60%;
-    height: 80%;
-    z-index: 1;
-    margin-top: 150px;
-    background-position-y: -25vw;
-    background-size: cover;
-    background-image: url("./team-pic.jpg");
-    border-radius: 20px;
-    transform: translateY(-140%);
-}
-
 .numbered-list li:hover {
     background-color: #ffffff;
     transform: scale(1.15);
@@ -309,132 +292,19 @@ section p, .title p {
 }
 
 @media (max-width: 768px) {
-    body {
-        font-size: 1rem;
-    }
-    header {
-        padding: 0;
-    }
-    .links {
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        padding: 0;
-        margin: 0;
-    }
-    .links a {
-        font-size: 1.1rem;
-        padding: 10px 0;
-        display: block;
-    }
-    section {
-        padding: 40px 5vw;
-        min-height: unset;
-    }
-    section h1 {
-        font-size: 2rem;
-        text-align: center;
-    }
-    section p, .title p {
-        font-size: 1.1rem;
-        text-align: center;
-    }
-    .numbered-list li {
-        font-size: 1rem;
-        margin: 10px 0;
-        padding: 8px;
-    }
-    .curve, .curve::before, .curve::after {
-        height: 80px;
-    }
-    /* .bubble::after, .bubble-back::before {
-        height: 40%;
-    } */
-    .spacer {
-        aspect-ratio: 1/1;
-        min-height: 80px;
-    }
-    .title h1 {
-        font-size: 2rem;
-    }
-    .title p {
-        font-size: 1rem;
-    }
-    .investment--text, .research--lab--text {
-        font-size: 2rem;
-        transform: none;
-        white-space: normal;
-    }
     .investment--ships {
-        width: 80% !important;
-        max-width: 350px;
-        height: 220px !important;
-        max-height: 250px;
-        margin: 40px auto 20px auto !important;
-        position: relative !important;
+        transition: 0.3s ease-in-out;
+        position: absolute;
+        width: 60%;
+        height: 80%;
+        max-height: 300px;
         background-size: cover;
         background-image: url("./ships.jpg");
         border-radius: 20px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    }
-    .investment--ships::after,
-    .investment--text {
-        display: none !important;
-    }
-    .investment--ships {
-        width: 95vw;
-        max-width: 500px;
-        height: 220px;
-        margin: 30px auto 0 auto;
-    }
-    .next-steps-text {
-        transform: none;
-        padding: 0 5vw;
-    }
-    #next-steps {
-        height: auto;
-        position: static;
-    }
-    .bubble::before::after {
-        height: 100%;
-    }
-    .next-steps--coral {
-        position: relative;
-        width: 95vw;
-        max-width: 500px;
-        height: 220px;
-        max-height: 300px;
-        margin: 30px auto 0 auto;
-        left: 0;
-        right: 0;
-        background-size: cover;
-        background-position: center;
-    }
-    .investment--ships::after {
-        display: none !important;
-    }
-    .investment--ships:hover::after {
-        background-color: rgba(255, 0, 102, 0.7); /* No hover effect on mobile */
-    }
-    .investment--text {
-        display: none !important;
-    }
-    .research--lab {
-        height: 240px !important;
-        max-height: 280px !important;
-        margin-top: 20vw;
-    }
-    .research--lab::after,
-    .research--lab--text {
-        display: none !important;
-    }
-
-    .about-us--pic {
-        height: 50%;
-        transform: translateY(-180%);
+        transform: translateY(40%);
     }
 }
-@media (min-width: 769px) {
+@media (min-width: 768px) {
     .investment--ships {
         transition: 0.3s ease-in-out;
         position: absolute;
@@ -445,51 +315,23 @@ section p, .title p {
         border-radius: 20px;
         transform: translateY(40%);
     }
-    .investment--text {
-        position: relative;
-        font-size: 5rem;
-        font-weight: bold;
-        color: transparent;
-        background-image: url("./ships.jpg");
-        background-size: cover;
-        background-clip: text;
-        -webkit-background-clip: text;
-        z-index: 2;
-        transform: translateY(150%);
-        background-position: 8% 28%;
-        text-align: center;
-        white-space: nowrap;
-        transition: 0.05s ease-in-out;
-        user-select: none;
-        cursor: default;
-        pointer-events: none;
-        display: block;
-        width: 100%;
-        height: auto;
-        left: unset;
-        top: unset;
-        line-height: normal;
-        padding: 0;
-    }
-}
-
-.investment--ships {
-    margin-top: 10vh;
 }
 
 .investment--ships::after {
-    content: '';
     position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
     background-color: rgba(255, 0, 102, 1);
     border-radius: 20px;
     transition: background-color 0.3s ease-in-out;
     z-index: 1;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
 }
+
 .investment--ships:hover::after {
     background-color: transparent; /* Make the overlay transparent on hover */
 }
+
 .investment--text {
     position: relative;
     font-size: 5rem;
@@ -509,7 +351,8 @@ section p, .title p {
     cursor: default;
     pointer-events: none;
 }
-.investment--ships:hover .investment--text {
+
+.investment--ships:hover ~ .investment--text {
     opacity: 0;
 }
 
@@ -528,8 +371,6 @@ section p, .title p {
 
 .research--lab::after {
     position: absolute;
-    top: 0;
-    left: 0;
     content: '';
     width: 100%;
     height: 100%;
@@ -567,8 +408,26 @@ section p, .title p {
     opacity: 0;
 }
 
+.about-us--pic {
+    transition: 0.3s ease-in-out;
+    position: absolute;
+    width: 60%;
+    height: 80%;
+    z-index: 1;
+    margin-top: 150px;
+    background-position-y: -25vw;
+    background-size: cover;
+    background-image: url("./team-pic.jpg");
+    border-radius: 20px;
+    transform: translateY(-140%);
+}
+
 .about-us--pic:hover {
     transform: translateY(-140%) scale(1.1);
+}
+
+.divider {
+    height: 100px;
 }
 
 .infrastructure--dna {
