@@ -465,7 +465,7 @@ section p {
         height: 40%;
     }
 
-    .next-steps {
+    #next-steps {
        top: 50vh;
     }
 }
