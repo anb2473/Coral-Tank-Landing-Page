@@ -464,6 +464,10 @@ section p {
     .infrastructure--dna {
         height: 40%;
     }
+
+    .next-steps {
+        transform: translateY(100%);
+    }
 }
 @media (min-width: 768px) {
     .investment--ships {
