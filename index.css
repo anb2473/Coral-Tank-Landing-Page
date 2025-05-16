@@ -288,64 +288,6 @@ section p {
     border-radius: 20px;
 }
 
-@media (max-width: 768px) {
-    .investment--ships {
-        transition: 0.3s ease-in-out;
-        position: absolute;
-        width: 60%;
-        height: 80%;
-        max-height: 300px;
-        margin-top: 23vh;
-        background-size: cover;
-        background-image: url("./ships.jpg");
-        border-radius: 20px;
-        transform: translateY(40%);
-    }
-
-    .next-steps--coral {
-        transform: translateY(50%);
-    }
-    
-    .next-steps--text {
-        transform: translateY(50%);
-    }
-
-    .investment--ships::after {
-        display: none;
-    }
-
-    .investment--text {
-        display: none;
-    }
-
-    .about-us--pic {
-        height: 40vh;
-    }
-
-    .research--lab {
-        height: 40vh;
-    }
-
-    .research--lab::after {
-        display: none;
-    }
-
-    .research--lab--text {
-        display: none;
-    }
-}
-@media (min-width: 768px) {
-    .investment--ships {
-        transition: 0.3s ease-in-out;
-        position: absolute;
-        width: 60%;
-        height: 80%;
-        background-size: cover;
-        background-image: url("./ships.jpg");
-        border-radius: 20px;
-        transform: translateY(40%);
-    }
-}
 
 .investment--ships::after {
     position: absolute;
@@ -478,4 +420,55 @@ section p {
 
 .steps-list {
     list-style-type: none;
+}
+
+@media (max-width: 768px) {
+    .investment--ships {
+        transition: 0.3s ease-in-out;
+        position: absolute;
+        width: 60%;
+        height: 80%;
+        max-height: 300px;
+        margin-top: 23vh;
+        background-size: cover;
+        background-image: url("./ships.jpg");
+        border-radius: 20px;
+        transform: translateY(40%);
+    }
+
+    .investment--ships::after {
+        display: none;
+    }
+
+    .investment--text {
+        display: none;
+    }
+
+    .about-us--pic {
+        height: 40vh;
+    }
+
+    .research--lab {
+        height: 40vh;
+    }
+
+    .research--lab::after {
+        display: none;
+    }
+
+    .research--lab--text {
+        display: none;
+    }
+}
+@media (min-width: 768px) {
+    .investment--ships {
+        transition: 0.3s ease-in-out;
+        position: absolute;
+        width: 60%;
+        height: 80%;
+        background-size: cover;
+        background-image: url("./ships.jpg");
+        border-radius: 20px;
+        transform: translateY(40%);
+    }
 }
