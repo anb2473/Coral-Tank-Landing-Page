@@ -460,6 +460,10 @@ section p {
     .research--lab--text {
         display: none;
     }
+
+    .infrastructure--dna {
+        height: 40%;
+    }
 }
 @media (min-width: 768px) {
     .investment--ships {
