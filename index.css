@@ -300,6 +300,26 @@ section p {
         border-radius: 20px;
         transform: translateY(40%);
     }
+
+    .investment--ships::after {
+        display: none;
+    }
+
+    .about-us--pic {
+        height: 40%;
+    }
+
+    .research--lab {
+        height: 40%;
+    }
+
+    .research--lab::after {
+        display: none;
+    }
+
+    .research--lab--text {
+        display: none;
+    }
 }
 @media (min-width: 768px) {
     .investment--ships {
@@ -311,10 +331,6 @@ section p {
         background-image: url("./ships.jpg");
         border-radius: 20px;
         transform: translateY(40%);
-    }
-
-    .about-us--pic {
-        height: 40%;
     }
 }
 
