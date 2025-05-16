@@ -312,6 +312,10 @@ section p {
         border-radius: 20px;
         transform: translateY(40%);
     }
+
+    .about-us--pic {
+        height: 40%;
+    }
 }
 
 .investment--ships::after {
