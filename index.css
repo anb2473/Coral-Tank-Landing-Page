@@ -466,7 +466,7 @@ section p {
     }
 
     #next-steps {
-       transform: translateY(100%);
+       transform: translateY(50%);
     }
 }
 @media (min-width: 768px) {
