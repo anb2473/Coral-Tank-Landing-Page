@@ -295,7 +295,7 @@ section p {
         width: 60%;
         height: 80%;
         max-height: 300px;
-        margin-top: 50vh;
+        margin-top: 15vh;
         background-size: cover;
         background-image: url("./ships.jpg");
         border-radius: 20px;
@@ -311,11 +311,11 @@ section p {
     }
 
     .about-us--pic {
-        height: 40%;
+        height: 40vh;
     }
 
     .research--lab {
-        height: 40%;
+        height: 40vh;
     }
 
     .research--lab::after {
