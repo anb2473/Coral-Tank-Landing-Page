@@ -30,9 +30,6 @@ header {
     header .links a:hover::after {
         width: 100%;
     }
-    .next-steps--coral {
-        height: 50%;
-    }
 }
 
 @media (max-width: 1250px) {
