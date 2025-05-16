@@ -193,7 +193,7 @@ section p {
 }
 
 .layer2 {
-    background-image: url('../Science/layer2.svg')
+    background-image: url('./layer2.svg')
 }
 
 .blob-motion {
