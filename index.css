@@ -466,7 +466,7 @@ section p {
     }
 
     #next-steps {
-       top: 50vh;
+       transform: translateY(100%);
     }
 }
 @media (min-width: 768px) {
