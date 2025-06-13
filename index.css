@@ -9,36 +9,7 @@ body {
 
 header {
     background-color: #3c31dd;
-}
-
-@media (min-width: 1250px) {
-    header .warning {
-        display: none;
-    }
-    header .links a {
-        position: relative;
-    }
-    header .links a::after {
-        content: "";
-        position: absolute;
-        width: 0;
-        height: 2px;
-        background-color: white;
-        transform: translate(-100%, 1000%);
-        transition: width 0.5s ease;
-    }
-    header .links a:hover::after {
-        width: 100%;
-    }
-}
-
-@media (max-width: 1250px) {
-    header .warning {
-        padding: 20px;
-    }
-    header .links {
-        display: none;
-    }
+    padding: 10px;
 }
 
 .links {
@@ -53,6 +24,21 @@ header {
     text-decoration: none;
     color: white;
     font-size: 1.25rem;
+    position: relative;
+}
+
+.links a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transform: translate(-100%, 1000%);
+    transition: width 0.5s ease;
+}
+
+.links a:hover::after {
+    width: 100%;
 }
 
 section {
@@ -66,6 +52,15 @@ section {
 
 section h1 {
     z-index: 1;
+    font-size: 3rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+section p {
+    z-index: 1;
+    font-size: 1.25rem;
+    text-align: center;
 }
 
 .h-shifted {
@@ -91,10 +86,6 @@ section h1 {
 
 .th-shifted {
     bottom: 125%;
-}
-
-section p {
-    z-index: 1;
 }
 
 .blue {
@@ -288,46 +279,59 @@ section p {
     border-radius: 20px;
 }
 
+/* Investment Section Styles */
+.investment--ships {
+    position: relative;
+    width: 60%;
+    height: 300px;
+    margin: 40px auto 0 auto;
+    background-image: url("./ships.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
 
 .investment--ships::after {
-    position: absolute;
     content: '';
+    position: absolute;
+    top: 0; left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 0, 102, 1);
+    background-color: rgba(255, 0, 102, 0.7); /* Slightly transparent overlay for better visibility */
     border-radius: 20px;
     transition: background-color 0.3s ease-in-out;
     z-index: 1;
 }
 
 .investment--ships:hover::after {
-    background-color: transparent; /* Make the overlay transparent on hover */
+    background-color: transparent;
 }
 
 .investment--text {
-    position: relative;
-    font-size: 5rem;
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    font-size: 3rem;
     font-weight: bold;
-    color: transparent; /* Makes the text transparent */
-    background-image: url("./ships.jpg"); /* Apply the same image as the background */
+    color: transparent;
+    background-image: url("./ships.jpg");
     background-size: cover;
     background-clip: text;
-    -webkit-background-clip: text; /* WebKit support */
-    z-index: 2;
-    transform: translateY(150%);
-    background-position: 8% 28%;
+    -webkit-background-clip: text;
     text-align: center;
     white-space: nowrap;
-    transition: 0.05s ease-in-out;
     user-select: none;
-    cursor: default;
     pointer-events: none;
 }
 
-.investment--ships:hover ~ .investment--text {
+.investment--ships:hover .investment--text { /* Corrected to target descendant */
     opacity: 0;
 }
 
+/* Research Lab (Innovation) Styles */
 .research--lab {
     transition: 0.3s ease-in-out;
     position: absolute;
@@ -339,47 +343,48 @@ section p {
     background-image: url("./lab.jpg");
     border-radius: 20px;
     transform: translateY(40%);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 .research--lab::after {
     position: absolute;
+    top: 0; left: 0;
     content: '';
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 0, 102, 1);
+    background-color: rgba(255, 0, 102, 0.7); /* Slightly transparent overlay */
     border-radius: 20px;
     transition: background-color 0.3s ease-in-out;
     z-index: 1;
 }
 
 .research--lab:hover::after {
-    background-color: transparent; /* Make the overlay transparent on hover */
+    background-color: transparent;
 }
 
 .research--lab--text {
-    position: relative;
-    font-size: 5rem;
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    font-size: 3rem;
     font-weight: bold;
-    color: transparent; /* Makes the text transparent */
-    background-image: url("./lab.jpg"); /* Apply the same image as the background */
+    color: transparent;
+    background-image: url("./lab.jpg");
     background-size: cover;
     background-clip: text;
-    -webkit-background-clip: text; /* WebKit support */
-    z-index: 2;
-    transform: translateY(350%);
-    background-position: 8% 28%;
+    -webkit-background-clip: text;
     text-align: center;
     white-space: nowrap;
-    transition: 0.05s ease-in-out;
     user-select: none;
-    cursor: default;
     pointer-events: none;
 }
 
-.research--lab:hover ~ .research--lab--text {
+.research--lab:hover .research--lab--text { /* Corrected to target descendant */
     opacity: 0;
 }
 
+/* About Us Picture Styles */
 .about-us--pic {
     transition: 0.3s ease-in-out;
     position: absolute;
@@ -392,6 +397,7 @@ section p {
     background-image: url("./team-pic.jpg");
     border-radius: 20px;
     transform: translateY(-140%);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 .about-us--pic:hover {
@@ -402,6 +408,7 @@ section p {
     height: 100px;
 }
 
+/* Infrastructure DNA Styles */
 .infrastructure--dna {
     transition: 0.3s ease-in-out;
     position: absolute;
@@ -412,6 +419,7 @@ section p {
     background-size: cover;
     background-image: url("./dna.jpg");
     border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 .steps-list li {
@@ -422,62 +430,160 @@ section p {
     list-style-type: none;
 }
 
-@media (max-width: 768px) {
-    .investment--ships {
-        transition: 0.3s ease-in-out;
-        position: absolute;
-        width: 60%;
-        height: 80%;
-        max-height: 300px;
-        margin-top: 23vh;
-        background-size: cover;
-        background-image: url("./ships.jpg");
-        border-radius: 20px;
-        transform: translateY(40%);
-    }
+/* --- Media Queries --- */
 
-    .investment--ships::after {
+/* Desktop First (min-width: 1250px) */
+@media (min-width: 1250px) {
+    header .warning {
         display: none;
-    }
-
-    .investment--text {
-        display: none;
-    }
-
-    .about-us--pic {
-        height: 30vh;
-        transform: translateY(-160%);
-    }
-
-    .research--lab {
-        height: 40vh;
-    }
-
-    .research--lab::after {
-        display: none;
-    }
-
-    .research--lab--text {
-        display: none;
-    }
-
-    .infrastructure--dna {
-        height: 40%;
-    }
-
-    #next-steps {
-       transform: translateY(35%);
     }
 }
-@media (min-width: 768px) {
+
+/* Tablet and Mobile (max-width: 1249px) - General adjustments for smaller screens */
+@media (max-width: 1249px) {
+    header .warning {
+        padding: 20px;
+        text-align: center;
+    }
+    header .links {
+        display: none;
+    }
+    section {
+        padding: 60px 10vw; /* Reduced padding for smaller screens */
+        min-height: auto;
+    }
+    section h1 {
+        font-size: 2.5rem; /* Slightly smaller headers */
+    }
+    section p, .title p {
+        font-size: 1.15rem; /* Adjusted for readability on smaller screens */
+    }
+    .curve, .curve::before, .curve::after {
+        height: 150px; /* Adjusted curve height */
+    }
+    .bubble::after, .bubble-back::before {
+        height: 50%; /* Adjusted bubble height */
+        transform: translateY(50%) translateY(80px); /* Adjusted transform */
+    }
+    .spacer {
+        aspect-ratio: 16/9; /* More standard aspect ratio */
+        min-height: 100px;
+    }
+}
+
+/* Mobile (max-width: 768px) - Specific adjustments for very small screens */
+@media (max-width: 768px) {
+    body {
+        font-size: 0.9rem;
+    }
+    header {
+        padding: 5px;
+    }
+    section {
+        padding: 30px 5vw;
+    }
+    section h1 {
+        font-size: 2rem;
+    }
+    section p, .title p {
+        font-size: 1rem;
+    }
+    .numbered-list li {
+        font-size: 0.9rem;
+        margin: 10px;
+        padding: 5px;
+    }
+    .numbered-list li:before {
+        left: -30px;
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+    }
+    .curve, .curve::before, .curve::after {
+        height: 100px;
+    }
+    .bubble::after, .bubble-back::before {
+        height: 35%;
+        transform: translateY(50%) translateY(50px);
+    }
+    .spacer {
+        min-height: 60px;
+    }
+
+    /* Investment Section - Mobile */
     .investment--ships {
-        transition: 0.3s ease-in-out;
-        position: absolute;
-        width: 60%;
-        height: 80%;
-        background-size: cover;
-        background-image: url("./ships.jpg");
-        border-radius: 20px;
-        transform: translateY(40%);
+        position: relative;
+        width: 90vw;
+        max-width: 400px;
+        height: 180px;
+        max-height: 220px;
+        margin: 30px auto;
+        transform: none; /* Remove transform for mobile */
+        display: block; /* Ensure visibility */
+    }
+    .investment--ships::after,
+    .investment--text {
+        display: none !important; /* Hide overlay and text */
+    }
+
+    /* About Us Picture - Mobile */
+    .about-us--pic {
+        height: 25vh;
+        width: 90vw;
+        max-width: 400px;
+        margin: 20px auto;
+        transform: none; /* Remove transform for mobile */
+        position: relative; /* Ensure proper flow */
+        display: block; /* Ensure visibility */
+    }
+
+    /* Research Lab (Innovation) - Mobile */
+    .research--lab {
+        height: 180px;
+        width: 90vw;
+        max-width: 400px;
+        margin: 30px auto;
+        transform: none; /* Remove transform for mobile */
+        position: relative; /* Ensure proper flow */
+        display: block; /* Ensure visibility */
+    }
+    .research--lab::after,
+    .research--lab--text {
+        display: none !important; /* Hide overlay and text */
+    }
+
+    /* Infrastructure DNA - Mobile */
+    .infrastructure--dna {
+        height: 180px;
+        width: 90vw;
+        max-width: 400px;
+        margin: 30px auto;
+        transform: none; /* Remove transform for mobile */
+        position: relative; /* Ensure proper flow */
+        display: block; /* Ensure visibility */
+    }
+
+    /* Next Steps Coral (Algae Slider) - Mobile */
+    #next-steps {
+       transform: none;
+       height: auto;
+       position: static;
+       padding-top: 30px;
+    }
+    .next-steps--coral {
+        position: relative;
+        width: 90vw;
+        max-width: 400px;
+        height: 180px;
+        margin: 20px auto;
+        transform: none; /* Remove transform for mobile */
+        display: block; /* Ensure visibility */
+    }
+    .next-steps-text {
+        display: none !important; /* Hide text */
+    }
+
+    .divider {
+        height: 30px;
     }
 }
